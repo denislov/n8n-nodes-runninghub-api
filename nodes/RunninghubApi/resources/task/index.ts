@@ -19,11 +19,11 @@ export const taskDescription: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Get Workflow Info',
-				value: 'getWorkfowInfo',
-				action: 'Get workflow',
-				description: 'Get workflow infomation',
+				name: 'Cancel Task',
+				value: 'cancelTask',
+				action: 'Cancel task',
 			},
+
 			{
 				name: 'Create Task',
 				value: 'createTask',
@@ -36,17 +36,17 @@ export const taskDescription: INodeProperties[] = [
 				action: 'Get task',
 				description: 'Get task infomation',
 			},
-			{
-				name: 'Cancel Task',
-				value: 'cancelTask',
-				action: 'Cancel task',
-				description: 'Cancel task',
-			},
+
 			{
 				name: 'Get Task Output',
 				value: 'getTaskOutput',
 				action: 'Get task output',
-				description: 'Get task output',
+			},
+			{
+				name: 'Get Workflow Info',
+				value: 'getWorkfowInfo',
+				action: 'Get workflow',
+				description: 'Get workflow infomation',
 			},
 		],
 		default: 'getTaskInfo',

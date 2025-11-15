@@ -72,7 +72,7 @@ export class RunninghubApi implements INodeType {
 		// (This could be a different value for each item in case it contains an expression)
 		for (let itemIndex = 0; itemIndex < items.length; itemIndex++) {
 			try {
-				let requestBody = {
+				const requestBody = {
 					apiKey: `${credentials?.apiKey}`,
 				};
 				let url = ""
