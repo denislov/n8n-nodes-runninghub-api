@@ -7,11 +7,11 @@ const showOnlyForWorkflowGet = {
 
 export const workflowGetDescription: INodeProperties[] = [
 	{
-		displayName: '工作流ID',
+		displayName: 'Workflow ID',
 		name: 'workflowId',
 		type: 'string',
 		required: true,
-		default: '0',
+		default: '',
 		displayOptions: {
 			show: showOnlyForWorkflowGet,
 		},

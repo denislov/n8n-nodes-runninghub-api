@@ -19,12 +19,6 @@ export const accountDescription: INodeProperties[] = [
 				value: 'getAccountInfo',
 				action: 'Get account',
 				description: 'Get Account Infomation',
-				routing: {
-					request: {
-						method: 'POST',
-						url: '/uc/openapi/accountStatus',
-					},
-				},
 			},
 		],
 		default: 'getAccountInfo',

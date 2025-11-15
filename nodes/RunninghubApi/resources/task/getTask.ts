@@ -11,11 +11,11 @@ const showOnlyForTaskGet = {
 
 export const taskGetDescription: INodeProperties[] = [
 	{
-		displayName: '任务ID',
+		displayName: 'Task ID',
 		name: 'taskId',
 		type: 'string',
 		required: true,
-		default: '0',
+		default: '',
 		displayOptions: {
 			show: showOnlyForTaskGet,
 		},

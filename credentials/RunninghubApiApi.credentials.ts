@@ -1,5 +1,6 @@
 import type {
 	IAuthenticateGeneric,
+	Icon,
 	ICredentialTestRequest,
 	ICredentialType,
 	INodeProperties,
@@ -10,8 +11,13 @@ export class RunninghubApiApi implements ICredentialType {
 
 	displayName = 'Runninghub Api API';
 
+	icon: Icon = {
+		light: 'file:../icons/runninghub-light.svg',
+		dark: 'file:../icons/runninghub-dark.svg',
+	};
+
 	// Link to your community node's README
-	documentationUrl = 'https://github.com/org/-runninghub-api?tab=readme-ov-file#credentials';
+	documentationUrl = 'https://github.com/denislov/n8n-nodes-runninghub-api?tab=readme#credentials';
 
 	properties: INodeProperties[] = [
 		{
@@ -29,6 +35,7 @@ export class RunninghubApiApi implements ICredentialType {
 		properties: {
 			body: {
 				apikey: '={{$credentials.apiKey}}',
+				extension: 'all'
 			},
 		},
 	};
