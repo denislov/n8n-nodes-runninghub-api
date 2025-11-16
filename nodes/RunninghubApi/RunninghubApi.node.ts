@@ -1,4 +1,4 @@
-import { IExecuteFunctions, IHttpRequestOptions, INodeExecutionData, NodeConnectionTypes, NodeOperationError, type INodeType, type INodeTypeDescription } from 'n8n-workflow';
+import { IExecuteFunctions, IHttpRequestOptions, INodeExecutionData, jsonParse, jsonStringify, NodeConnectionTypes, NodeOperationError, type INodeType, type INodeTypeDescription } from 'n8n-workflow';
 import { accountDescription } from './resources/account';
 import { taskDescription } from './resources/task';
 
@@ -97,6 +97,7 @@ export class RunninghubApi implements INodeType {
 						Object.assign(requestBody, {
 							workflowId: workflowId,
 						});
+						
 						const sendNodeInfoList = this.getNodeParameter(
 							'sendNodeInfoList',
 							itemIndex,
@@ -104,9 +105,9 @@ export class RunninghubApi implements INodeType {
 						) as boolean;
 
 						if (sendNodeInfoList){
-							const nodeInfoList = this.getNodeParameter('nodeInfoList', itemIndex, '') as string;
+							const nodeInfoList = this.getNodeParameter('nodeInfoList', itemIndex, '[]');
 							Object.assign(requestBody, {
-								nodeInfoList: nodeInfoList,
+								nodeInfoList: jsonParse(nodeInfoList!.toString()),
 							});
 						}
 					}
