@@ -1,4 +1,4 @@
-import { IExecuteFunctions, IHttpRequestOptions, INodeExecutionData, jsonParse, jsonStringify, NodeConnectionTypes, NodeOperationError, type INodeType, type INodeTypeDescription } from 'n8n-workflow';
+import { IExecuteFunctions, IHttpRequestOptions, INodeExecutionData, jsonParse, NodeConnectionTypes, NodeOperationError, type INodeType, type INodeTypeDescription } from 'n8n-workflow';
 import { accountDescription } from './resources/account';
 import { taskDescription } from './resources/task';
 
